@@ -38,12 +38,42 @@ body {
     border-radius: 5px;
   }
   
-  .messages div {
-    padding: 8px;
-    margin: 4px 0;
-    background-color: #e1f7d5;
+  .messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .message {
+    padding: 10px;
+    margin: 5px;
     border-radius: 5px;
-    word-wrap: break-word;
+  }
+  
+  /* Mensajes enviados por el usuario */
+  .message.sent {
+    background-color: #e2f7e1; /* Verde suave */
+    align-self: flex-end;
+  }
+  
+  /* Mensajes recibidos de la otra persona */
+  .message.received {
+    background-color: #d1c4e9; /* Lavanda suave */
+    align-self: flex-start;
+  }
+  
+  /* Mensajes del sistema */
+  .message.system {
+    background-color: #fff4c2; /* Amarillo suave */
+    text-align: center;
+    font-style: italic;
+  }
+  
+  /* Mensajes de error */
+  .message.error {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #842029; /* Texto rojo oscuro */
+    font-weight: bold;
   }
   
   /* Input y botón */
